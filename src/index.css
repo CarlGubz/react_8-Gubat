@@ -1,0 +1,333 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+#zenbu{
+  background-image: url("./pages/bg.jpg");
+  background-size: cover ;
+  background-repeat: no-repeat;
+  height: 1200px;
+
+}
+
+#all-nav{
+  margin-left: 0px;
+  width: 100%;
+}
+
+.navbar{
+  font-size: 20px;
+}
+
+#all{
+  margin-top:120px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#center-all{
+  vertical-align: auto;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  margin-top: 70px;
+  margin-bottom:50px;
+  text-align: center;
+}
+
+#digital-t{
+  text-align: center;
+  font-style: italic;
+  font-size: 90px;
+  color:white;
+  font-weight: 700;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FF10F0;
+
+}
+
+#create-by{
+  font-weight: 100;
+  font-size: 25px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-style: italic;
+  text-align:center;
+  color:white;
+}
+.mb-2{
+  width:39%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 10px;
+  border: 10px #FF10F0;
+  border-radius:10px; 
+  
+}
+
+#namae{
+  margin-bottom: 0px;
+  font-size:20px;
+  
+   
+}
+
+ 
+
+
+#calculator-samp, #json-samp{
+  width:18.5%;
+  text-align: center !important;  
+  align-items: center !important;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  color:white;
+  margin-top: 15px;
+
+}
+
+#calculator-samp{
+  margin-right:20px;
+ 
+}
+
+#hobbies-sec{
+  padding: 50px; 
+  width:27%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center !important;
+  color: white;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  border-color: 10px #FF10F0 !important; 
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+
+
+#h33{
+  margin-bottom: 50px;
+  font-size: 35px;
+}
+
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+ 
+}
+button:hover {
+   color:black !important;;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #707b85;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+
+/* Style the video: 100% width and height to cover the entire window */
+ 
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+} 
+
+
+/****CALCULATOR PAGE ***/
+#zenbu-calc{
+    background-image: url("./pages/bg.jpg");
+    background-size: cover ;
+    background-repeat: no-repeat;
+    height: 1200px;
+}
+#enter, #calc-buttons{
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+#enter{
+  margin-top: 100px;
+}
+#exp-enter{
+  width: 105%;
+  height: 60px;
+}
+
+#h1-calc{
+  color:white;
+  font-size: 60px;
+  margin-bottom: 50px;
+  text-align: center;
+   
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color:  black;
+}
+.calculator-display{
+  text-align: center;
+ 
+ 
+
+}
+.calculator-display-1{
+  color:white;
+  font-weight: 500;
+  font-size: 50px;
+  border-color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  height: 80px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black; 
+  
+
+}
+.calc-btn{
+  width:110%;
+  height: 90px;
+  margin-bottom: 10px;
+  font-size: 40%;
+ 
+
+  
+}
+.home-btn{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+   
+}
+
+
+/*********HOBBIES PAGE *****/
+
+#hobbies-table{
+  margin-top: 100px;
+  width: 70%;
+  color: white;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  
+}
+
+#hb-1,#hb-2, #hb-3{
+  width:100%;
+  padding: 40px;
+  border-radius:16px;
+  border-color: 10px #FF10F0 !important; 
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+#hb-1{
+  width:90%
+}
+
+#hb-2{
+  width:109%
+}
+#hb-3
+{
+  width:80%
+}
+
+
+
+/*********JSON PAGE *****/
+
+#hobbies-table{
+  margin-top: 100px;
+  width: 70%;
+  color: white;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  
+}
+
+#js-1,#js-2, #js-3{
+  width:70%;
+  padding: 40px;
+  border-radius:16px;
+  border-color: 10px #FF10F0 !important; 
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+
+/***********JSON PAGE*****************/
+#json{
+  background-image: url("./pages/bg.jpg");
+  background-size: cover ;
+  background-repeat: no-repeat;
+  height: 1200px;
+
+}
+
+#json-div{
+  margin-top: 100px;
+}
+
+
+
