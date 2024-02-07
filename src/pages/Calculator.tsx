@@ -1,101 +1,87 @@
-import { useState } from 'react';
-import { Button, Col, Container, Nav, Navbar, Row } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
-  
+import { useState } from "react";
  
-const Calculator = () => {
-  let navigate = useNavigate();
-        const toHome=()=>{
-            let path = `Home`; 
-            navigate(path);
-        } 
-  const [display, setDisplay] = useState('');
+import CalcButton from "../components/CalcButton";
 
-  const handleButtonClick = (value: string) => {
-    setDisplay((prevDisplay) => prevDisplay + value);
-  };
+export default function Calculator() {
+  const [input, setInput] = useState("");
 
-  const handleCalculate = () => {
-    try {
-      setDisplay(eval(display).toString());
-    } catch (error) {
-      setDisplay('Error');
+  const handleClick = (value: string) => {
+    if (input === "Error" || input === "Infinity") {
+      setInput(value);
+    } else {
+      // Check if the current input is the result and the clicked value is an operator
+      if (/[-+*/]/.test(value) && /[0-9]/.test(input)) {
+        // Check if last character of input is an operator
+        if (/[-+*/]$/.test(input)) {
+          setInput((prevInput) => prevInput.slice(0, -1) + value); // Replace the last operator
+        } else {
+          setInput((prevInput) => prevInput + value);
+        }
+      } else if (input === "0" && value === "0") {
+        // Do nothing (prevent adding multiple zeros)
+      } else if (/[-+*/]$/.test(input) && value === "0") {
+        // Do nothing (prevent adding zero after operator)
+      } else if (input === "0") {
+        setInput(value);
+      } else {
+        setInput((prevInput) => prevInput + value);
+      }
     }
   };
 
-  const handleClear = () => {
-    setDisplay('');
+  const handleReset = () => {
+    setInput("0");
   };
 
-  
+  const handleEvaluate = () => {
+    try {
+      setInput(eval(input).toString());
+    } catch (error) {
+      setInput("Error");
+    }
+  };
 
   return (
-     
-
-    <div id="zenbu-calc">
-    <Navbar bg="dark" data-bs-theme="dark" className="navbar navbar-expand-lg navbar-dark shadow-5-strong">
-                <Container>
-                <Navbar.Brand href="Home">カルロス ・グバト</Navbar.Brand>
-                <Nav className="me-auto">
-                    <Nav.Link href="Home">Home</Nav.Link>
-                    <Nav.Link href="Calculator">Calculator</Nav.Link>
-                    <Nav.Link href="JSON">JSON</Nav.Link>
-                    <Nav.Link href="Hobbies">Hobbies</Nav.Link>
-                </Nav>
-                </Container>
-            </Navbar>
-    
-    <div id="enter">
- 
-    <div className="calculator"> 
-    <h1 id="h1-calc"> 電卓 Calculator</h1>
-    
-      <div className="calculator-display-1"> 
-        <div className="calculator-display"> {display}</div>
-      </div>
+    <>
       
-       
-      <div className="calculator-row">
-      <Row> 
-        <Col> <Button variant="info" size="lg" className="calc-btn" onClick={() => handleButtonClick('7')}>7</Button></Col>
-        <Col> <Button variant="info" size="lg" className="calc-btn" onClick={() => handleButtonClick('8')}>8</Button></Col>
-        <Col><Button variant="info" size="lg" className="calc-btn" onClick={() => handleButtonClick('9')}>9</Button> </Col>
-        <Col> <Button variant="warning" size="lg" className="calc-btn" onClick={() => handleButtonClick('/')}>/</Button></Col>
-      </Row>
-      </div>
-      <div className="calculator-row">
-      <Row>
-        <Col><Button variant="info" size="lg" className="calc-btn" onClick={() => handleButtonClick('4')}>4</Button></Col>
-        <Col><Button variant="info" size="lg" className="calc-btn" onClick={() => handleButtonClick('5')}>5</Button></Col>
-        <Col><Button variant="info" size="lg" className="calc-btn" onClick={() => handleButtonClick('6')}>6</Button></Col>
-        <Col><Button variant="warning" size="lg" className="calc-btn" onClick={() => handleButtonClick('*')}>*</Button></Col>
-      </Row> 
-      </div>
-      <div className="calculator-row">
-      <Row>
-        <Col>  <Button variant="info" size="lg" className="calc-btn" onClick={() => handleButtonClick('1')}>1</Button></Col>
-        <Col> <Button variant="info" size="lg" className="calc-btn" onClick={() => handleButtonClick('2')}>2</Button></Col>
-        <Col> <Button variant="info" size="lg" className="calc-btn" onClick={() => handleButtonClick('3')}>3</Button></Col>
-        <Col> <Button variant="warning" size="lg" className="calc-btn" onClick={() => handleButtonClick('-')}>-</Button></Col>
-      </Row>
-      </div>
-      <div className="calculator-row">
-      <Row>
-        <Col><Button variant="info" size="lg" className="calc-btn" onClick={() => handleButtonClick('0')}>0</Button></Col>
-        <Col><Button variant="info" size="lg" className="calc-btn" onClick={handleClear}>C</Button></Col>
-        <Col><Button variant="info" size="lg" className="calc-btn" onClick={handleCalculate}>=</Button></Col>
-        <Col><Button variant="warning" size="lg" className="calc-btn" onClick={() => handleButtonClick('+')}>+</Button></Col>
-      </Row>
-       
-      </div>
-    </div>
-    </div>
-    </div>
-
-
-);
-  
-};
-
-
-export default Calculator;
+      <div id="zenbu-calc">
+          <div id="enter"> 
+          <div className="calculator"> 
+            <h1 id="digital-t-light">Calculator</h1>
+            <div className="calculator-display-1"> 
+                  <div className="input" data-testid="display">
+                 </div>
+              {input}
+            </div>
+            <div className="calculator-row">
+            
+              <CalcButton label="7" onClick={() => handleClick("7")} />
+              <CalcButton label="8" onClick={() => handleClick("8")} />
+              <CalcButton label="9" onClick={() => handleClick("9")} />
+              <CalcButton label="÷" onClick={() => handleClick("/")} />
+            </div> 
+            <div className="calculator-row">
+              <CalcButton label="4" onClick={() => handleClick("4")} />
+              <CalcButton label="5" onClick={() => handleClick("5")} />
+              <CalcButton label="6" onClick={() => handleClick("6")} />
+              <CalcButton label="×" onClick={() => handleClick("*")} />
+            </div> 
+            <div className="calculator-row">
+              <CalcButton label="1" onClick={() => handleClick("1")} />
+              <CalcButton label="2" onClick={() => handleClick("2")} />
+              <CalcButton label="3" onClick={() => handleClick("3")} />
+              <CalcButton label="-" onClick={() => handleClick("-")} />
+            </div> 
+            <div className="calculator-row">
+              <CalcButton label="C" onClick={handleReset} />
+              <CalcButton label="0" onClick={() => handleClick("0")} />
+              <CalcButton label="=" onClick={handleEvaluate} />
+              <CalcButton label="+" onClick={() => handleClick("+")} />
+            </div > 
+              </div>
+            </div>
+          </div>
+        
+    </>
+  );
+}

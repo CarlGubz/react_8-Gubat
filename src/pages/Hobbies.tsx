@@ -1,79 +1,33 @@
-import { useState } from 'react';
-import { Button } from 'react-bootstrap';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import { useNavigate } from 'react-router-dom';
-import Form from 'react-bootstrap/Form';
- 
- 
+import HobbyCard from '../components/HobbyCard';
 
-export default function home() {
-    const [] = useState("tite");
-
-    //Routing
-
-    let navigate = useNavigate();
-        const toCalc=()=>{
-            let path = `Calculator`; 
-            navigate(path);
-        }
-
-        const toJSON=()=>{
-            let path = `JSON`; 
-            navigate(path);
-
-        }
-        const toHobbies=()=>{
-            let path = `Hobbies`; 
-            navigate(path);
-        }
-
+function Hobbies() {
+  return (
+    
+    <div  id="zenbu-hobbies" >
+       <h1 id="digital-t-light"> Hobbies</h1>
+      <div className="d-flex flex-wrap justify-content-around" id="hobby-card">
+        <HobbyCard 
+          title="Watching Kdrama"
+          description="
+          K-dramas are like a captivating symphony of emotions, blending intricate storytelling with vibrant visuals. With a unique blend of romance, humor, and intense plot twists, these dramas take you on a rollercoaster of feelings."
+          imageSrc="https://static0.moviewebimages.com/wordpress/wp-content/uploads/2023/11/every-korean-drama-releasing-in-december-2023.jpg"
+        />
         
-
-    //Html Home Page
-    return (
+        <HobbyCard
+          title="Reading"
+          description="Reading is a passport to countless worlds, where imagination takes flight on the wings of words. In the pages of a book, we discover not only stories but the untapped realms of our own minds."
+          imageSrc="https://img.emg-services.net/HtmlPages/HtmlPage17411/patrick-tomasso-oaqk7qqnh_c-unsplash-1.jpg"
+        />
+        
+        <HobbyCard
+          title="Sleeping"
+          description="Sleep is the nightly balm that heals the weariness of the day, a sanctuary where dreams whisper tales of the subconscious. In the embrace of slumber, we find renewal, preparing us for the dawn of a new day with the promise of refreshed vitality."
+          imageSrc="https://raisingchildren.net.au/__data/assets/image/0023/49280/Sleep-FAQs.jpg"
+        />
     
-    <div id="zenbu">
-
-            <Navbar bg="dark" data-bs-theme="dark" className="navbar navbar-expand-lg navbar-dark shadow-5-strong">
-                <Container>
-                <Navbar.Brand href="Home">カルロス ・グバト</Navbar.Brand>
-                <Nav className="me-auto">
-                    <Nav.Link href="Home">Home</Nav.Link>
-                    <Nav.Link href="Calculator">Calculator</Nav.Link>
-                    <Nav.Link href="JSON">JSON</Nav.Link>
-                    <Nav.Link href="Hobbies">Hobbies</Nav.Link>
-                </Nav>
-                </Container>
-            </Navbar>
-    
-        <div id="all">  
-             <h1 id="digital-t"> 趣味 HOBBIES</h1>
-            <table id="hobbies-table">
-                <tr>
-                  <th> <img id="hb-1" src="https://static0.moviewebimages.com/wordpress/wp-content/uploads/2023/11/every-korean-drama-releasing-in-december-2023.jpg"></img></th>
-                  <th> <img id="hb-2" src="https://img.emg-services.net/HtmlPages/HtmlPage17411/patrick-tomasso-oaqk7qqnh_c-unsplash-1.jpg"></img></th>
-                  <th> <img id="hb-3" src="https://raisingchildren.net.au/__data/assets/image/0023/49280/Sleep-FAQs.jpg"></img></th>
-                </tr>
-                <tr>
-                  <th> K-Drama</th>
-                  <th> Writing</th>
-                  <th> Sleeping</th>
-                  
-                </tr>
-
-
-
-            </table>
-              
-
-            </div>
-
- 
-
+      </div>
     </div>
-    );
-};
+  );
+}
 
- 
+export default Hobbies;
