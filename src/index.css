@@ -2,11 +2,9 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -27,7 +25,6 @@ a:hover {
   background-size: cover ;
   background-repeat: no-repeat;
   height: 1200px;
- 
 }
 
 #all-nav{
@@ -38,9 +35,10 @@ a:hover {
 .navbar{
   font-size: 20px;
   width:100%;
-
 }
 
+
+/* HOME PAGE BODY */
 #all{
   align-items: center;
   margin-left: auto;
@@ -48,7 +46,6 @@ a:hover {
   width: 100%;
  
 }
-
 #center-all{
   vertical-align: auto;
   align-items: center;
@@ -57,10 +54,8 @@ a:hover {
   width: 70%;
   margin-bottom:35px;
   text-align: center;
- 
 }
 
- 
 #digital-t{
   padding-top: 1em;
   margin-bottom: 10vh;
@@ -84,10 +79,6 @@ a:hover {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #FF10F0; 
 }
-
-
- 
-
 #create-by{
   font-weight: 100;
   font-size: 25px;
@@ -104,19 +95,12 @@ a:hover {
   margin-bottom: 10px;
   border: 10px #FF10F0;
   border-radius:10px; 
-  
 }
 
 #namae{
   margin-bottom: 0px;
-  font-size:20px;
-  
-   
+  font-size:20px; 
 }
-
- 
-
-
 #calculator-samp, #json-samp{
   width:18.5%;
   text-align: center !important;  
@@ -129,13 +113,10 @@ a:hover {
   margin-top: 15px;
   font-size: 1vw;
   text-shadow:1px 1px black;
-  
-
 }
 
 #calculator-samp{
   margin-right:20px;
- 
 }
 
 #hobbies-sec{
@@ -146,7 +127,6 @@ a:hover {
   text-align: center !important;
   color: white;
   text-shadow:1px 1.5px black;
-  /* From https://css.glass */
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   border-color: 10px #FF10F0 !important; 
@@ -154,13 +134,7 @@ a:hover {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-
 }
-
-
-
- 
-
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -171,28 +145,21 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
- 
 }
 button:hover {
    color:black !important;
    text-shadow:1px 1px white !important;
 
 }
-button:focus,
-button:focus-visible {
+button:focus,button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
-
-
-/* Style the video: 100% width and height to cover the entire window */
  
-
+/* Style the video: 100% width and height to cover the entire window */
 #myBtn:hover {
   background: #ddd;
   color: black;
 } 
-
 
 /****CALCULATOR PAGE ***/
 #zenbu-calc{
@@ -200,14 +167,12 @@ button:focus-visible {
     background-size: cover ;
     background-repeat: no-repeat;
     height: 1200px;
-    
 }
 #enter, #calc-buttons{
   width: 40%;
   margin-left: auto;
   margin-right: auto;
   padding:3%
-   
 }
 
 .calculator{
@@ -215,25 +180,15 @@ button:focus-visible {
   margin-right: auto;
   align-items: center;
   width: 70%;
-}
- 
-  
+} 
 #exp-enter{
   width: 170%;
   height: 60px;
-  
-}
-
- 
+} 
  .input{
   text-align: center;
   overflow-x:a ;
- 
- 
-
 }
-
- 
 .calculator-display-1{
   color:white;
   font-weight: 500;
@@ -254,27 +209,19 @@ button:focus-visible {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-   
-  
-
 }
 .calc-btn{
   width:23%;
   height: 90px;
   margin-bottom: 10px;
   font-size: 40%;
-  margin: 1%;
- 
-
-   
+  margin: 1%;  
 }
 .home-btn{
   width: 90%;
   margin-left: auto;
-  margin-right: auto;
-   
+  margin-right: auto; 
 }
-
 
 /*********HOBBIES PAGE *****/
 #zenbu-hobbies{
@@ -293,16 +240,12 @@ button:focus-visible {
   box-shadow: 0 5 10px rgba(0, 0, 0, 0.1);
   margin-left: auto;
   margin-right: auto;
-  
-  
 }
 
 #hobby-card {
   padding-left: 10%;
   padding-right: 10%;
   transition: transform 0.3s, box-shadow 0.3s;
-  
-  
 }
 
 .hobbies-card {
@@ -315,7 +258,6 @@ button:focus-visible {
   backdrop-filter: blur(5px)!important;
   -webkit-backdrop-filter: blur(5px)!important;
   border: 1px solid rgba(255, 255, 255, 0.3)!important;
- 
 }
 
 .hobby-pic{
@@ -325,8 +267,6 @@ button:focus-visible {
 .hobbies-box {
   display: flex;
   margin-top: 20px;
- 
-  
 }
 
 .hobby-images {
@@ -345,33 +285,21 @@ button:focus-visible {
   color:white !important;
   text-shadow: 1px 1px black;
 }
- 
-
-
 .hobbies-card:hover {
   transform: scale(1.1);  
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
 }
-  
-
 /*********JSON PAGE *****/
- 
 .row{
   width:70%;
 }
-
-
 #zenbu-json{
     background-image: url("./pages/bg.jpg");
     background-size: cover ;
     background-repeat: no-repeat;
     height: 1200px;
-     
-  
 }
-
-.json-card{
-   
+.json-card{ 
   width: 90%;
   background: rgba(133, 126, 126, 0.2);
   border-radius: 16px;
@@ -393,29 +321,14 @@ button:focus-visible {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
   transition: transform 0.3s, box-shadow 0.3s;
 }
-
-
 .card-body, .row, .json-card{
-   
   margin-left: auto !important;
   margin-right: auto !important;
-  
 }
-
 .row{
   width:90%;
- 
 }
-
- 
-
- 
-
-
-
-
 /**********SCREENS*************/
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #707b85;
@@ -434,25 +347,20 @@ button:focus-visible {
 @media screen and (max-width:600px) {
   #zenbu{
     height:1000px;
-  
   }
   #zenbu-calc{
     height:900px ;
-
-    
   }
   
-#zenbu-json{
+  #zenbu-json{
   background-image: url("./pages/bg.jpg");
   background-size: cover ;
   background-repeat: no-repeat;
   height: 3200px;
-
-}
+  }
   #zenbu-hobbies{
     height:2200px ;
   }
-
    #calc-page{
     height:4000px ;
   }
@@ -462,9 +370,7 @@ button:focus-visible {
     margin-bottom: 0.5em;
     text-shadow:1px 1px black;
     -webkit-text-stroke-color: white; 
-  }
-
-   
+  }   
   #create-by, #namae, .mb-2{
     width:100%
   }
@@ -472,18 +378,12 @@ button:focus-visible {
   #calculator-samp, #json-samp{
     width:100%;
     font-size:1em;
-   
   }
- 
   #hobbies-sec{
-    
     width: 70%;
-    
   }
- 
 
   /* CALCULATOR PAGE */
-
   .calculator-display-1{
     width: 90%;
     font-weight: 500;
@@ -498,26 +398,19 @@ button:focus-visible {
   .calculator-row, #enter,  .calculator-display-1{
     margin-left: auto;
     margin-right: auto;
-    
   }
-
-
-  
   #enter{
     width: 100%;
- 
   }
  
-  /* HOBBIES */
+  /* HOBBIES PAGE*/
   #digital-t-light{
     padding-top:1em;
     font-size: 3em;
     margin-bottom: 0.5em;
     text-shadow:1px 1px black;
-    -webkit-text-stroke-color: white;  
-
+    -webkit-text-stroke-color: white; 
   }
-  
   .hobbies-card {
     transition: transform 0.3s, box-shadow 0.3s;
     width: 70%;
@@ -531,68 +424,49 @@ button:focus-visible {
     padding:10px;
     margin-top: 70px;
   }
-
- 
-
   .hobby-pic{
     height: 200px;
   }
-
   .hobbies-box {
     display: flex;
     margin-top: 20px;
     padding-bottom: 20% !important;
-  
-    
   }
-
   .hobby-images {
     max-width: 300px;
   }
-
-  
   .hobby-title{
     font-size: 40px;
   }
-
   .hobby-text, .hobby-title{
     color:white !important;
     text-shadow: 1px 1px black;
   }
-  
-
-
   .hobbies-card:hover {
     transform: scale(1.1);  
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1); 
   }
-  /* JSON */
+  /* JSON PAGE*/
   .json-card{
     padding-bottom: 30px;
   }
-
 
 /* OTHERS */
   @media (min-width: 768px) {
   .card {
     flex-direction: row;
   }
-
   .card-image {
     width: 40%;
   }
-
   .card-content {
     width: 60%;
-    
   }
 } 
-
 @media ( max-width: 767px) {
   .card {
     width: 90%;
   }
-
   .card-image {
     width: 100%;
   }
@@ -600,56 +474,42 @@ button:focus-visible {
     margin-top: 50px;
   }
 }
-
- 
 }
-
 @media (min-width: 768px) {
   .card {
     flex-direction: row;
   }
-
   .card-image {
     width: 40%;
   }
-
   .card-content {
     width: 60%;
   }
-
-  
-    
-
-}
-
-@media (max-width: 767px) {
-  .card {
-    width: 90%;
-  }
-
-  .card-image {
-    width: 100%;
-  }
-  .h1-title-hobbies{
-    margin-top: 50px;
-  }
-
-}
-
-@media (max-width: 767px) {
-  .card {
-    width: 90%;
-  }
-
-  .card-image {
-    width: 100%;
-  }
-  .h1-title-hobbies{
-    margin-top: 50px;
-  }
  
 }
+@media (max-width: 767px) {
+  .card {
+    width: 90%;
+  }
+  .card-image {
+    width: 100%;
+  }
+  .h1-title-hobbies{
+    margin-top: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .card {
+    width: 90%;
+  }
 
+  .card-image {
+    width: 100%;
+  }
+  .h1-title-hobbies{
+    margin-top: 50px;
+  }
+}
 
   /* TABLET AND HALF WINDOW */
 /* CSS for screens with a width of half the viewport */
@@ -659,81 +519,43 @@ button:focus-visible {
     font-size: 8vh;
     margin-bottom: 3vh;
   }
-
   #center-all{
     width:100%
   }
-
   #hobbies-sec{
     width:40%
   }
-
   #calculator-samp, #json-samp{
     font-size: 2vh;
   }
- 
   #create-by{
     margin-top: 3vh;
   }
-
-  /* CALCULATOR */
+  /* CALCULATOR PAGE*/
   .calculator{
     width: 100%;
-    
   }
-
-  /* JSON */
+  /* JSON PAGE*/
   #zenbu-json{
     height: 1800px;   
   }
-
   .json-card{
     width: 100%;
-     
   }
   .row{
     width: 100%;
     padding-left: 15%;
-    
-   
-     
   }
-
-   
- /* HOBBIES */
-
+ /* HOBBIES PAGE*/
  #zenbu-hobbies{
   height: 1500px;
-  
  }
-
  .hobbies-card{
   width:40%;
   margin-top: 100px;
-
  }
  
  #hobby-card{
   margin-top: 10px;
  }
- 
- 
-
-
- 
-  
-
-
-
-
-
-  
 } 
-
-
-
-
-
-
-
-
