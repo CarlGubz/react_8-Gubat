@@ -37,8 +37,8 @@ export default function home() {
                             <Form.Control id="namae" type="text" placeholder="名前 / FULL NAME" />   
                         </Form.Group>
                     </Form>  
-                    <Button id="calculator-samp" size="lg" variant="outline-light" onClick={toCalc}> CALCULATOR <br/>SAMPLE </Button> 
-                    <Button id="json-samp" size="lg" variant="outline-light" onClick={toJSON}>  JSON <br/> SAMPLE </Button> 
+                    <Button id="calculator-samp" size="lg" variant="light" onClick={toCalc}> CALCULATOR <br/>SAMPLE </Button> 
+                    <Button id="json-samp" size="lg" variant="light" onClick={toJSON}>  JSON <br/> SAMPLE </Button> 
                 </div>
                 <div id="hobbies-sec">
                         <h3 id="h33"> My Hobbies</h3>

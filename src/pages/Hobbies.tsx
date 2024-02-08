@@ -26,7 +26,6 @@ function Hobbies() {
               description="Sleep is the nightly balm that heals the weariness of the day, a sanctuary where dreams whisper tales of the subconscious. In the embrace of slumber, we find renewal, preparing us for the dawn of a new day with the promise of refreshed vitality."
               imageSrc="https://raisingchildren.net.au/__data/assets/image/0023/49280/Sleep-FAQs.jpg"
             />
-    
       </div>
     </div>
   );
